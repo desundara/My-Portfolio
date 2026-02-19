@@ -32,7 +32,7 @@ export default function Contact() {
       <main className="pb-16 pt-28">
         <div className="max-w-6xl px-6 mx-auto">
           <SectionHeading
-            eyebrow="// contact"
+            eyebrow="contact"
             title="Let's Work Together"
             subtitle="Have a project in mind or just want to say hello? I'd love to hear from you."
           />
@@ -105,7 +105,7 @@ export default function Contact() {
                       value={form.name}
                       onChange={handleChange}
                       required
-                      placeholder="John Doe"
+                      placeholder="Kamal Perera"
                       className="w-full px-4 py-3 text-sm text-white transition-all border bg-white/5 border-border rounded-xl font-body placeholder:text-muted focus:outline-none focus:border-accent/50 focus:bg-accent/5"
                     />
                   </div>
@@ -117,7 +117,7 @@ export default function Contact() {
                       value={form.email}
                       onChange={handleChange}
                       required
-                      placeholder="john@email.com"
+                      placeholder="kamal@email.com"
                       className="w-full px-4 py-3 text-sm text-white transition-all border bg-white/5 border-border rounded-xl font-body placeholder:text-muted focus:outline-none focus:border-accent/50 focus:bg-accent/5"
                     />
                   </div>
@@ -163,10 +163,6 @@ export default function Contact() {
                   {status === 'sending' && <><Loader className="w-4 h-4 animate-spin" /> Sending...</>}
                   {status === 'sent' && <><CheckCircle className="w-4 h-4" /> Message Sent!</>}
                 </button>
-
-                <p className="mt-4 text-xs text-center font-body text-muted">
-                  💡 Tip: You can also connect FormSpree or EmailJS to make this form functional.
-                </p>
               </form>
             </motion.div>
           </div>
