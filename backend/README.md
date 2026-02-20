@@ -1,20 +1,20 @@
 # Portfolio Backend — Node.js + MySQL
 
-Contact form data MySQL database එකට save කරන Express.js backend.
+Contact form data MySQL database save, Express.js backend.
 
 ## Setup
 
-### 1. MySQL Database Create කරන්න
+### 1. MySQL Database Create
 
-MySQL Workbench හෝ terminal:
+MySQL Workbench or terminal:
 ```sql
 CREATE DATABASE portfolio_db;
 ```
 
-### 2. .env File Create කරන්න
+### 2. .env File Create
 
 ```bash
-cp .env.example .env
+cp .env
 ```
 
 `.env` file edit කරන්න:
