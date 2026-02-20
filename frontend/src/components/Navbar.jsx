@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Code2 } from 'lucide-react'
 
@@ -15,6 +15,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -23,6 +24,18 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => setOpen(false), [location])
+
+  const handleLogoClick = (e) => {
+    e.preventDefault()
+    if (location.pathname === '/') {
+      // Already on home — just scroll to top smoothly
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      // Navigate to home, then scroll to top
+      navigate('/')
+      setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100)
+    }
+  }
 
   return (
     <motion.header
@@ -35,14 +48,18 @@ export default function Navbar() {
     >
       <div className="flex items-center justify-between max-w-6xl px-6 mx-auto">
         {/* Logo */}
-        <NavLink to="/" className="flex items-center gap-2 group">
+        <a
+          href="/"
+          onClick={handleLogoClick}
+          className="flex items-center gap-2 cursor-pointer group"
+        >
           <div className="flex items-center justify-center transition-colors border rounded-lg w-9 h-9 bg-accent/10 border-accent/30 group-hover:bg-accent/20">
             <Code2 className="w-4 h-4 text-accent" />
           </div>
           <span className="text-lg font-bold font-display">
             <span className="text-gradient">G</span>ayani
           </span>
-        </NavLink>
+        </a>
 
         {/* Desktop Nav */}
         <nav className="items-center hidden gap-1 md:flex">
