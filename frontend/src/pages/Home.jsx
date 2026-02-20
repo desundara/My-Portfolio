@@ -434,7 +434,7 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.1 }}
                   className="absolute right-0 px-2 py-2 border bottom-1/4 glass rounded-xl border-border">
-                  <p className="text-2xl font-bold font-display text-accent2">8+</p>
+                  <p className="text-2xl font-bold font-display text-accent2">5+</p>
                   <p className="text-xs text-muted font-body">Projects</p>
                 </motion.div>
               </div>
