@@ -23,7 +23,8 @@ const services = [
     desc: 'Currently developing and maintaining full-stack web applications by building responsive and user-friendly front-end interfaces, implementing efficient back-end logic, developing and integrating RESTful APIs, and designing optimized MSSQL databases. Focused on delivering secure, reliable, high-performance systems with an excellent user experience.',
     tags: ['React.js', 'Node.js', 'Responsive UI', 'REST API', 'MSSQL', 'Database Design', 'User Experience'],
     emoji: '💻',
-    image: '/projects/rt.png',
+    image: '/projects/rt-loyalty-landing.png',
+    galleryLink: '/frontend-gallery',
   },
   {
     title: 'Web Developer Intern',
@@ -350,6 +351,17 @@ export default function Home() {
                   <Download className="w-4 h-4" />
                   Download CV
                 </a>
+                <Link
+                  to="/frontend-gallery"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })}
+                  className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold transition-all border rounded-xl border-border font-display hover:border-accent/30 hover:bg-white/5"
+                  style={{ color: '#ffffff', borderColor: '#a78bfa30' }}
+                  onMouseEnter={e => { e.currentTarget.style.background = '#a78bfa10'; e.currentTarget.style.borderColor = '#a78bfa50' }}
+                  onMouseLeave={e => { e.currentTarget.style.background = ''; e.currentTarget.style.borderColor = '#a78bfa30' }}
+                >
+                  View My Work
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </motion.div>
 
               <motion.div variants={fadeUp} className="flex items-center gap-3">
@@ -434,7 +446,7 @@ export default function Home() {
                 <motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.1 }}
                   className="absolute right-0 px-2 py-2 border bottom-1/4 glass rounded-xl border-border">
-                  <p className="text-2xl font-bold font-display text-accent2">5+</p>
+                  <p className="text-2xl font-bold font-display text-accent2">8+</p>
                   <p className="text-xs text-muted font-body">Projects</p>
                 </motion.div>
               </div>

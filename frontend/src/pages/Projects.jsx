@@ -75,7 +75,7 @@ const items = [
     ],
     color: '#00bfff',
     emoji: '💼',
-    image: '/projects/rt.png',
+    image: '/projects/rt-loyalty-landing.png',
   },
   {
     title: 'Intern – System Implementer & Web Developer',
@@ -98,6 +98,19 @@ const items = [
   },
 
   // ── Personal Projects ───────────────────────────────────────────────────────
+  {
+    title: 'Ceylon POS System',
+    subtitle: 'Point of Sale Frontend',
+    type: 'personal',
+    role: 'Solo Developer',
+    github: 'https://github.com/desundara/CeylonPOS-System',
+    tech: ['React.js', 'Tailwind CSS'],
+    desc: 'A modern, fully responsive Point of Sale frontend built with React.js and Tailwind CSS. Features a clean dashboard, product management, billing interface, and sales overview — designed for small to medium retail businesses.',
+    features: ['Product search & cart management', 'Invoice generation & billing', 'Sales dashboard & overview', 'Responsive UI with Tailwind CSS'],
+    color: '#a78bfa',
+    emoji: '🏪',
+    image: '/projects/ceylonpos-dashboard.png',
+  },
   {
     title: 'Swing BurgerShop Management System',
     subtitle: 'Restaurant Management App',

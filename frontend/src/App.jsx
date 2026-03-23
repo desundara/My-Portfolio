@@ -8,13 +8,14 @@ import Projects from './pages/Projects'
 import Skills from './pages/Skills'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
+import FrontendGallery from './pages/FrontendGallery'
 
 function App() {
   const location = useLocation()
 
   return (
-    <div className="noise bg-mesh min-h-screen">
-      <div className="grid-pattern fixed inset-0 pointer-events-none z-0" />
+    <div className="min-h-screen noise bg-mesh">
+      <div className="fixed inset-0 z-0 pointer-events-none grid-pattern" />
       <Cursor />
       <Navbar />
       <AnimatePresence mode="wait">
@@ -24,6 +25,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/frontend-gallery" element={<FrontendGallery />} />
         </Routes>
       </AnimatePresence>
       <Footer />
